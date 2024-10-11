@@ -5,10 +5,10 @@ let intlTelInput;
 let progressBar;
 
 const countryPlaceholders = {
-    ru: '912 345-67-89',
-    ua: '50 123 4567',
-    kz: '771 000 9998',
-    by: '29 491-19-11',
+    tr: '90 544 909 6348',
+    be: '32 000 000',
+    de: '49 000 000',
+    gb: '44 759 960 8079',
     custom: '1 202-555-0135',
 };
 
@@ -16,21 +16,21 @@ let attackId = '';
 
 document.addEventListener('DOMContentLoaded', () => {
     window.intlTelInputGlobals.getCountryData().push({
-        name: 'Нет в списке',
-        iso2: 'custom',
+        name: 'en',
+        iso2: 'gb',
         dialCode: '',
         priority: 0,
         areaCodes: null,
     });
     intlTelInput = window.intlTelInput(phoneInput, {
         onlyCountries: [
-            'ru',
-            'ua',
-            'kz',
-            'by',
+            'tr',
+            'be',
+            'de',
+            'gb',
             'custom',
         ],
-        initialCountry: 'ru',
+        initialCountry: 'gb',
         separateDialCode: true,
     });
 
